@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | A2zpluswears Fashion</title>
+
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; color: #333; }
+        header { background: #000; color: white; padding: 20px; text-align: center; }
+
+        /* HERO */
+        .hero {
+            height: 40vh;
+            background: url('images/contact-banner.jpg') center/cover no-repeat;
+            display: flex; align-items: center; justify-content: center;
+            color: white; text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: 2.5rem; }
+
+        section { padding: 50px 8%; }
+
+        /* CONTACT GRID */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .form-group {
+            display: flex; flex-direction: column;
+            margin-bottom: 18px;
+        }
+        .form-group label { margin-bottom: 6px; font-size: 0.9rem; }
+        .form-group input, .form-group textarea {
+            padding: 12px; border-radius: 6px; border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        textarea { height: 150px; resize: vertical; }
+
+        .send-btn {
+            background: #000; color: white;
+            padding: 14px; border-radius: 6px;
+            width: 180px; text-align: center;
+            border: none; cursor: pointer; font-size: 1.05rem;
+        }
+        .send-btn:hover { background: #444; }
+
+        /* DETAILS BOX */
+        .details-box {
+            padding: 20px;
+            border-radius: 12px;
+            background: #fafafa;
+            border: 1px solid #eee;
+        }
+
+        .details-box h3 { margin-top: 0; }
+        .details-item { margin-bottom: 18px; }
+
+        .details-item strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1rem;
+        }
+
+        /* SOCIAL */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 12px;
+            font-size: 1.2rem; text-decoration: none;
+            color: #000;
+        }
+
+        /* MAP */
+        .map iframe {
+            width: 100%; height: 350px;
+            border: none; border-radius: 12px;
+        }
+
+        footer {
+            margin-top: 60px; padding: 20px;
+            text-align: center; background: #f7f7f7;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 850px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    
+    <h1>Contact Us</h1>
+</header>
+
+<div class="hero">
+    <h1>We're Here to Help</h1>
+</div>
+
+<section>
+
+    <div class="contact-container">
+
+        <!-- CONTACT FORM -->
+        <div>
+            <h2>Send Us a Message</h2>
+
+            <form action="/submit_form" method="post">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="yourname@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" placeholder="+234 806 000 0000">
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Write your message here..." required></textarea>
+                    <input type="hidden" name="subject" value="Contact Form Submission">
+
+                </div>
+
+                <button class="send-btn" type="submit">Send Message</button>  
+                <button class="send-btn" type="reset">Reset</button>
+            </form>
+        </div>
+
+        <!-- CONTACT DETAILS -->
+        <div class="details-box">
+            <h3>Contact Information</h3>
+
+            <div class="details-item">
+                <strong>Address:</strong>
+                8 Majekodunmi Street, Allen, Ikeja, Lagos, Nigeria
+            </div>
+
+            <div class="details-item">
+                <strong>Email:</strong>
+                support@a2zpluswears.com
+            </div>
+
+            <div class="details-item">
+                <strong>Phone:</strong>
+                +234 (0) 806 025 9909
+            </div>
+
+            <h3>Business Hours</h3>
+            <div class="details-item">
+                Monday – Friday: 9am – 6pm  
+                <br>Saturday: 10am – 4pm  
+                <br>Sunday: Closed
+            </div>
+
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#">🌐</a>
+                <a href="#">📘</a>
+                <a href="#">📸</a>
+                <a href="#">🐦</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="map">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.992033928394!2d3.3489336735047686!3d6.597759722299021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b923a8ac6c3c9%3A0xe73349783095beb!2s8%20Majekodunmi%20St%2C%20Allen%2C%20Ikeja%20101233%2C%20Lagos!5e1!3m2!1sen!2sng!4v1764347613297!5m2!1sen!2sng" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+        
+    </iframe>
+</section>
+
+
+<footer>
+    <p>&copy; 2025 a2zpluswears Fashion. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>

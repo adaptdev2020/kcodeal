@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Blog | FarawayHaven</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; color: #333; }
+
+        /* HERO */
+        .hero {
+            height: 50vh;
+            background: url('images/blog-hero.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff; text-align: center;
+        }
+        .hero h1 { font-size: 3rem; }
+
+        /* GRID */
+        section { padding: 60px 8%; }
+        h2 { margin-bottom: 20px; }
+        
+        .blog-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .blog-card img { width: 100%; height: 240px; object-fit: cover; }
+        .blog-content { padding: 20px; }
+        .blog-content h3 { margin: 0 0 10px; }
+        .blog-content p { line-height: 1.5; }
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #000; font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            padding: 20px;
+            border-left: 1px solid #eee;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .category-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .category-list li {
+            margin: 8px 0; 
+        }
+        .category-list a {
+            text-decoration: none;
+            color: #444;
+        }
+        .category-list a:hover {
+            color: #000;
+        }
+
+        .featured-post img { width: 100%; height: 140px; object-fit: cover; border-radius: 10px; }
+        .featured { margin-bottom: 40px; }
+
+        /* PAGINATION */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 10px;
+        }
+        .pagination a {
+            padding: 10px 18px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        .pagination a:hover {
+            background: #444;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f7f7f7;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Fashion Insights, Trends & Style Guides</h1>
+    </div>
+
+    <section>
+        <div class="blog-container">
+
+            <!-- MAIN BLOG ENTRIES -->
+            <div>
+                <!-- Blog Post 1 -->
+                <div class="blog-card">
+                    <img src="images/blog1.jpg" alt="Fashion Trends">
+                    <div class="blog-content">
+                        <h3>Top 10 Fashion Trends for 2025</h3>
+                        <p>Discover the bold styles, colors, and fashion items dominating the new year. From luxury streetwear to sustainable pieces, here are the must-have looks...</p>
+                        <a href="blog-post.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-card">
+                    <img src="images/blog2.jpg" alt="Wardrobe Essentials">
+                    <div class="blog-content">
+                        <h3>Wardrobe Essentials Every Woman Should Own</h3>
+                        <p>A curated list of timeless pieces guaranteed to elevate your style. Build a wardrobe that works for every season and occasion...</p>
+                        <a href="blog-post.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="blog-card">
+                    <img src="images/blog3.jpg" alt="Men’s Style Tips">
+                    <div class="blog-content">
+                        <h3>Men’s Style Tips for Effortless Elegance</h3>
+                        <p>From choosing the right fit to layering like a pro, discover expert-approved style hacks for modern men...</p>
+                        <a href="blog-post.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#">&laquo; Prev</a>
+                    <a href="#">Next &raquo;</a>
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+
+                <!-- Search -->
+                <div class="featured">
+                    <h3>Search</h3>
+                    <input 
+                        type="text" 
+                        placeholder="Search articles..." 
+                        style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+                </div>
+
+                <!-- Categories -->
+                <div class="featured category-list">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Fashion Trends</a></li>
+                        <li><a href="#">Style Guides</a></li>
+                        <li><a href="#">Men's Fashion</a></li>
+                        <li><a href="#">Women's Fashion</a></li>
+                        <li><a href="#">Luxury & Lifestyle</a></li>
+                    </ul>
+                </div>
+
+                <!-- Featured Post -->
+                <div class="featured">
+                    <h3>Featured Post</h3>
+                    <div class="featured-post">
+                        <img src="images/blog-featured.jpg" alt="">
+                        <p style="margin-top: 10px;"><strong>The Rise of Sustainable Fashion in Africa</strong></p>
+                        <a href="blog-post.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 A2zpluswears Fashion. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
